@@ -9,7 +9,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: curl https://purge.jsdelivr.net/gh/yisar/labor/sw.js
-  compile: cross compile
+
+  compile:
+    name: cross compile
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
